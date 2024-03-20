@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Flex, Box, Spacer, Heading, Button, IconButton } from '@chakra-ui/react';
+import { Flex, Box, Spacer, Heading, Button, IconButton, Divider } from '@chakra-ui/react';
 import { HamburgerIcon, AddIcon } from '@chakra-ui/icons'
 
 export const NavBar: FC<{}> = () => {
@@ -10,15 +10,17 @@ export const NavBar: FC<{}> = () => {
             </Box>
             <Spacer />
             <Box>
-                <Button colorScheme="teal" mx="2">< AddIcon /></Button>
+                <Button colorScheme="teal" mx="2">< AddIcon fontSize="10px" /><Box paddingLeft="10px" fontSize="13px">Add Note</Box></Button>
             </Box>
-            <IconButton
-                variant='outline'
-                colorScheme='teal'
-                aria-label='Options'
-                fontSize='20px'
-                icon={<HamburgerIcon />}
-            />
+            <Box>
+                <IconButton
+                    variant='outline'
+                    colorScheme='teal'
+                    aria-label='Options'
+                    icon={<HamburgerIcon />}
+                    mx={2}
+                />
+            </Box>
         </Flex>
     );
 };
