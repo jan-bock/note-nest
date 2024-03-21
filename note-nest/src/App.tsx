@@ -1,6 +1,6 @@
 import './App.css'
 
-import { ChakraProvider, Divider } from '@chakra-ui/react'
+import { Box, ChakraProvider, Divider } from '@chakra-ui/react'
 import { NavBar } from './components/NavBar/NavBar'
 import { NotesPlayGround } from './components/NotesPlayGround/NotesPlayGround'
 

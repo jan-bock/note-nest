@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Flex, Box, Spacer, Heading, Button, IconButton, Divider } from '@chakra-ui/react';
+import { Flex, Box, Spacer, Heading, Button, IconButton } from '@chakra-ui/react';
 import { HamburgerIcon, AddIcon } from '@chakra-ui/icons'
 
 export const NavBar: FC<{}> = () => {
