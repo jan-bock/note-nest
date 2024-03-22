@@ -5,6 +5,7 @@ import { NavBar } from './components/NavBar/NavBar'
 import { NotesPlayGround } from './components/NotesPlayGround/NotesPlayGround'
 
 const App = () => {
+
   return (
     <ChakraProvider>
       <NavBar />
