@@ -4,18 +4,22 @@ import { HamburgerIcon, AddIcon } from '@chakra-ui/icons'
 import { db } from '../../db'
 
 export const NavBar: FC<{}> = () => {
+
   async function addNote() {
     try {
 
-      const noteContent = "jan's note";
-      const starred = false;
+      const noteContent: string = "";
+      const starred: boolean = false;
+      const x: number = 0;
+      const y: number = 0;
       const id = await db.notes.add({
         noteContent,
-        starred
+        starred,
+        x,
+        y
       });
-      console.log("completed: ", id)
-    } catch {
-      console.log("error")
+    } catch (error: unknown) {
+      console.log("Encountered an error: ", error)
     }
   }
 
@@ -26,7 +30,7 @@ export const NavBar: FC<{}> = () => {
       </Box>
       <Spacer />
       <Box>
-        <Button colorScheme="teal" mx="2">< AddIcon fontSize="10px" onClick={() => addNote()} /><Box paddingLeft="10px" fontSize="13px">Add Note</Box></Button>
+        <Button colorScheme="teal" mx="2" onClick={addNote}>< AddIcon fontSize="10px" /><Box paddingLeft="10px" fontSize="13px">Add Note</Box></Button>
       </Box>
       <Box>
         <IconButton
