@@ -1,10 +1,11 @@
 import './App.css'
 
-import { Box, ChakraProvider, Divider } from '@chakra-ui/react'
+import { ChakraProvider, Divider } from '@chakra-ui/react'
 import { NavBar } from './components/NavBar/NavBar'
 import { NotesPlayGround } from './components/NotesPlayGround/NotesPlayGround'
 
 const App = () => {
+
   return (
     <ChakraProvider>
       <NavBar />

@@ -3,7 +3,12 @@ import Draggable from 'react-draggable';
 import { Box, Textarea, IconButton, MenuButton, Menu, MenuList, MenuItem } from '@chakra-ui/react'
 import { CopyIcon, DeleteIcon, HamburgerIcon, StarIcon } from "@chakra-ui/icons";
 
-export const Note: FC<{}> = () => {
+export interface NoteType {
+    noteContent: string;
+    starred: boolean;
+}
+
+export const Note: FC<NoteType> = ({ noteContent, starred }) => {
     return (
         <>
             <Draggable
@@ -39,7 +44,7 @@ export const Note: FC<{}> = () => {
                             </MenuList>
                         </Menu>
                     </Box>
-                    <Textarea border={"none"} minH={"100px"} minW={"100px"} resize={"both"} placeholder="Edit me by clicking here..." />
+                    <Textarea border={"none"} minH={"100px"} minW={"100px"} fontSize={"14px"} resize={"both"} placeholder="Edit me by clicking here..." content={noteContent} />
                 </Box>
             </Draggable>
         </>
