@@ -75,7 +75,7 @@ export const Note: FC<NoteType> = ({
     }
   };
 
-  const onDrag = (e: DraggableEvent, data: DraggableData) => {
+  const onDrag = (_e: DraggableEvent, data: DraggableData) => {
     setNotePosition((prevState) => ({
       ...prevState,
       x: prevState.x + data.deltaX,
