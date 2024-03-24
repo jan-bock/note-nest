@@ -2,14 +2,14 @@
 
 ## About
 NoteNest is a draggable sticky notes dashboard built with:
-- Vite
+- **Vite
 - PNPM
 - React
 - TypeScript
 - Chakra
 - Dexie.js
 - IndexedDB
-- Vercel
+- Vercel**
 Kudos to Archie Biddiscome; see the Acknowledges tab in the app to find out why :) 
 
 ## Demo
