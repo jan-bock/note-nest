@@ -12,11 +12,20 @@ export const NavBar: FC<{}> = () => {
       const starred: boolean = false;
       const x: number = 0;
       const y: number = 0;
-      const id = await db.notes.add({
+      const w: number = 250;
+      const h: number = 200;
+      const z: number = 1;
+      const color: string = "rgba(103,198,192, 0.6)"
+
+      await db.notes.add({
         noteContent,
         starred,
+        color,
         x,
-        y
+        y,
+        w,
+        h,
+        z
       });
     } catch (error: unknown) {
       console.log("Encountered an error: ", error)

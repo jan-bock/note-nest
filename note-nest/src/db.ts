@@ -5,8 +5,12 @@ export interface NoteType {
   id?: number;
   noteContent: string;
   starred: boolean;
+  color: string;
   x: number;
   y: number;
+  w: number;
+  h: number;
+  z: number;
 }
 
 export class MySubClassedDexie extends Dexie {
@@ -15,7 +19,7 @@ export class MySubClassedDexie extends Dexie {
   constructor() {
     super('NoteNestDB');
     this.version(1).stores({
-      notes: '++id, noteContent, starred' // Primary key and indexed props
+      notes: '++id, noteContent, starred, color, x, y, w, h, z' // Primary key and indexed props
     });
   }
 }
