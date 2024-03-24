@@ -1,3 +1,7 @@
+Still TODO:
+- welcome screen when there are no notes!
+- link to public github page with readme
+
 # Welcome to NoteNest
 
 NoteNest is a draggable sticky notes dashboard built with:
