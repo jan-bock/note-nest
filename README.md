@@ -1,7 +1,11 @@
 # Welcome to NoteNest
 
-## About
 NoteNest is a draggable sticky notes dashboard built with:
+
+## Technologies Used:
+
+I used this project as an opportunity to learn Chakra UI, and use Vite and PNPM for the first time
+
 - **Vite**
 - **PNPM**
 - **React**
