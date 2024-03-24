@@ -1,21 +1,25 @@
 // db.ts
-import Dexie, { Table } from 'dexie';
+import Dexie, { Table } from "dexie";
 
-export interface Note {
+export interface NoteType {
   id?: number;
   noteContent: string;
   starred: boolean;
+  color: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  z: number;
 }
 
 export class MySubClassedDexie extends Dexie {
-  // 'friends' is added by dexie when declaring the stores()
-  // We just tell the typing system this is the case
-  notes!: Table<Note>;
+  notes!: Table<NoteType>;
 
   constructor() {
-    super('NoteNestDB');
+    super("NoteNestDB");
     this.version(1).stores({
-      notes: '++id, noteContent, starred' // Primary key and indexed props
+      notes: "++id, noteContent, starred, color, x, y, w, h, z",
     });
   }
 }
