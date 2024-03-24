@@ -1,7 +1,6 @@
 import {
   Box,
   Card,
-  CardBody,
   Divider,
   Heading,
   Modal,
