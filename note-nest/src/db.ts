@@ -1,5 +1,5 @@
 // db.ts
-import Dexie, { Table } from 'dexie';
+import Dexie, { Table } from "dexie";
 
 export interface NoteType {
   id?: number;
@@ -17,9 +17,9 @@ export class MySubClassedDexie extends Dexie {
   notes!: Table<NoteType>;
 
   constructor() {
-    super('NoteNestDB');
+    super("NoteNestDB");
     this.version(1).stores({
-      notes: '++id, noteContent, starred, color, x, y, w, h, z' // Primary key and indexed props
+      notes: "++id, noteContent, starred, color, x, y, w, h, z",
     });
   }
 }

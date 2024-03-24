@@ -19,7 +19,7 @@ import {
 import { db } from "../../../db";
 import { useLiveQuery } from "dexie-react-hooks";
 import {
-    NoteType,
+  NoteType,
   deleteNote,
   getNoteHeaderColor,
   onChange,
