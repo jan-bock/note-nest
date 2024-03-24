@@ -1,27 +1,38 @@
 import { db } from "../../../db";
 
-export const onChange = (
+export interface NoteType {
+  noteContent: string;
+  starred: boolean;
+  color: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  z: number;
+  id?: number;
+}
+
+export const onChange = async (
   event: React.ChangeEvent<HTMLTextAreaElement>,
   id: number | undefined
 ) => {
   id &&
-    db.notes.update(id, {
+    (await db.notes.update(id, {
       noteContent: event.target.value,
-    });
+    }));
 };
 
 export const deleteNote = (id: number | undefined) => id && db.notes.delete(id);
 
-// Raise sticky; query for highest z index, and increment
-export const onMouseDown = (
+export const onMouseDown = async (
   maxZNote: NoteType | undefined,
   id: number | undefined
 ) => {
   maxZNote &&
     id &&
-    db.notes.update(id, {
+    (await db.notes.update(id, {
       z: maxZNote.z + 1,
-    });
+    }));
 };
 
 export const onStarClick = (id: number | undefined, starred: boolean) => {
@@ -52,15 +63,3 @@ export const getNoteHeaderColor = (color: string) => {
       return "#6097D3";
   }
 };
-
-export interface NoteType {
-  noteContent: string;
-  starred: boolean;
-  color: string;
-  x: number;
-  y: number;
-  w: number;
-  h: number;
-  z: number;
-  id?: number;
-}

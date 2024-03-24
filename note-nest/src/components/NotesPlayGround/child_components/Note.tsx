@@ -42,6 +42,8 @@ export const Note: FC<NoteType> = ({
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
   let maxZNote = useLiveQuery(() => db.notes.orderBy("z").last());
 
+  if (!id) return null;
+
   const [notePosition, setNotePosition] = useState({
     x: x,
     y: y,
@@ -50,18 +52,18 @@ export const Note: FC<NoteType> = ({
   });
 
   useEffect(() => {
-    id &&
-      db.notes.update(id, {
-        x: notePosition.x,
-        y: notePosition.y,
-        w: notePosition.w,
-        h: notePosition.h,
-      });
+    db.notes.update(id, {
+      x: notePosition.x,
+      y: notePosition.y,
+      w: notePosition.w,
+      h: notePosition.h,
+    });
   }, [notePosition, id]);
 
-  // my app todos:
-  // - duplicate
+  // my app TODOs:
   // - top level button (About (github), Delete All Notes, creator (linkedin), acknowledgements/inspiration
+  // - placeholder on load when notes is empty
+  // - host on vercel!
 
   const onMouseUp = () => {
     const textAreaSize = textAreaRef.current?.getBoundingClientRect();
@@ -186,14 +188,13 @@ export const Note: FC<NoteType> = ({
               </Box>
               <Divider />
               <MenuItem
-                icon={<StarIcon color={"grey"} />}
+                icon={<StarIcon color={"gold"} />}
                 onClick={() => onStarClick(id, starred)}
               >
                 Star
               </MenuItem>
-              <MenuItem icon={<CopyIcon color={"grey"} />}>Duplicate</MenuItem>
               <MenuItem
-                icon={<DeleteIcon color={"grey"} />}
+                icon={<DeleteIcon color={"red"} />}
                 onClick={() => deleteNote(id)}
               >
                 Delete
