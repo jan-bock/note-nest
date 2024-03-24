@@ -14,7 +14,6 @@ import {
 import {
   HamburgerIcon,
   AddIcon,
-  StarIcon,
   ExternalLinkIcon,
   QuestionIcon,
   AtSignIcon,
