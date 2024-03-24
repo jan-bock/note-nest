@@ -15,7 +15,7 @@ I used this project as an opportunity to learn Chakra UI, and use Vite and PNPM 
 - **IndexedDB**
 - **Vercel**
 
-Kudos to Archie Biddiscome; see the Acknowledges tab in the app to find out why :) 
+Kudos to **Archie Biddiscome**; see the Acknowledgements tab in the app to find out why :) 
 
 ## Demo
 To see the Demo click here <- in the future to be hosted on Vercel
