@@ -11,7 +11,6 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import {
-  CopyIcon,
   DeleteIcon,
   HamburgerIcon,
   StarIcon,
