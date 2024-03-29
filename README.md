@@ -1,30 +1,35 @@
-Still TODO:
-- welcome screen when there are no notes!
-- link to public github page with readme
+## 🚧 Development TODOS 🚧
+- Welcome screen when there are no notes!
+- Link to public github page with readme re about
+- Typing bug when editing an existing note; jumps to the end instead of editing where the cursor is placed
+
+---
 
 # Welcome to NoteNest
 
-NoteNest is a draggable sticky notes dashboard built with:
+**NoteNest is a draggable sticky notes dashboard** 📝
+
+<img width="1790" alt="Screenshot 2024-03-24 at 22 36 58" src="https://github.com/jan-bock/note-nest/assets/113291832/537a940e-f217-49f3-b810-ad51ee0bbba5">
 
 ## Technologies Used:
 
-I used this project as an opportunity to learn Chakra UI, and use Vite and PNPM for the first time
+NoteNest was built using the following technologies:
 
-- **Vite**
-- **PNPM**
 - **React**
 - **TypeScript**
-- **Chakra**
+- **ChakraUI**
+- **Vite**
+- **PNPM**
 - **Dexie.js**
 - **IndexedDB**
 - **Vercel**
 
-Kudos to **Archie Biddiscome**; see the Acknowledgements tab in the app to find out why :) 
+Kudos to **Archie Biddiscome**. See the Acknowledgements tab in the app to find out why 📝
 
 ## Demo
-To see the Demo click here <- in the future to be hosted on Vercel
+To see the Demo click here
 
 ## Setup steps:
-1. Clone the repo or open the app in GitHub CodeSpaces
-2. Run **PNPM i** in the root directory where package.json sits to install NoteDesk's dependencies
-3. Open the displayed port in your browser and click away!
+1. Clone the repo using **git clone** or open the app in GitHub CodeSpaces
+2. Run **PNPM i** in the root directory where package.json sits, to install NoteNest's dependencies
+3. Open the displayed port in your browser and sticky away!
