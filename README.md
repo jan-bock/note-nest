@@ -19,10 +19,9 @@ NoteNest was built using the following technologies:
 
 Kudos to **Archie Biddiscome**. See the Acknowledgements tab in the app to find out why 📝
 
-## Demo
-To see the Demo click here
-
 ## Setup steps:
 1. Clone the repo using **git clone** or open the app in GitHub CodeSpaces
 2. Run **PNPM i** in the root directory where package.json sits, to install NoteNest's dependencies
 3. Open the displayed port in your browser and sticky away!
+
+Disclaimer! Please note, I spun up this project as a challenge and so the code is not in its final state, nor are all the features that I initially intended implemented here!
