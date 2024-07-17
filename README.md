@@ -1,10 +1,3 @@
-## 🚧 Development TODOS 🚧
-- Welcome screen when there are no notes!
-- Link to public github page with readme re about
-- Typing bug when editing an existing note; jumps to the end instead of editing where the cursor is placed
-
----
-
 # Welcome to NoteNest
 
 **NoteNest is a draggable sticky notes dashboard** 📝
