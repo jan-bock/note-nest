@@ -1,5 +1,0 @@
- - demo
- - about
- - tech used
- - acknolwdgments and inspiration for design (archie)
- - how to launch locally
